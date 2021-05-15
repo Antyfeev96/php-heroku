@@ -1,3 +1,2 @@
 <?php
-
-echo 'I\'m alive!';
+include 'index.html';
