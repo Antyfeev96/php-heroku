@@ -1,7 +1,10 @@
 <?php
-include 'index.html';
+session_start();
 if (isset($_SESSION['username'])) {
-  echo 'Hello, ' . $_SESSION['username'];
+  session_destroy();
+  echo 'Hello, ' . $_SESSION['username'] . PHP_EOL;
+  $content = "<a href='exit.php'>Нажми на меня!</a>";
+  echo $content;
 } else {
-  echo '123';
+  include 'index.html';
 }
